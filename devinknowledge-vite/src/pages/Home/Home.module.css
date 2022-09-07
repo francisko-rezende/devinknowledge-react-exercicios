@@ -1,0 +1,248 @@
+.rootContainer {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg-main);
+
+  display: flex;
+  flex-direction: row;
+}
+
+/* SIDEBAR */
+.sidebarContainer {
+  width: 100%;
+  max-width: 580px;
+  height: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+  background-color: var(--color-bg-sidebar);
+  color: var(--color-white);
+  padding: 1em;
+}
+
+.sidebarContainer__logo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25em 0;
+  margin-bottom: 2em;
+}
+
+/* input */
+
+.inputGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+.inputGroup:last-child {
+  margin-bottom: 0;
+}
+
+.inputGroup label {
+  font-size: 0.75rem;
+  font-weight: 300;
+  margin-bottom: 0.5em;
+}
+
+.inputGroup span {
+  font-size: 0.75rem;
+  color: var(--color-error);
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+  width: 100%;
+  padding: 0.75em;
+  border-radius: 2.5px;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  resize: none;
+  color: var(--color-black);
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+}
+
+.inputGroup select option {
+  padding: 1em;
+}
+
+.inputGroup input:focus {
+  outline: var(--color-main) solid 3px;
+}
+
+/* btn group */
+
+.btnGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5em 0;
+}
+
+.alignLeft {
+  justify-content: flex-start;
+}
+
+.alignLeft > * {
+  margin-right: 0.5em;
+}
+
+/* btn */
+
+.btn {
+  border: none;
+  background: var(--color-main);
+  padding: 1em;
+  border-radius: 2.5px;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+.primary {
+  background: var(--color-main);
+}
+
+.secondary {
+  background: var(--color-secondary);
+}
+
+/* Main  */
+
+.mainContainer {
+  width: 100%;
+  max-height: 100%;
+  overflow-x: auto;
+  padding: 2em;
+}
+
+.cardList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1em;
+  row-gap: 1em;
+}
+
+/* summary */
+
+.summaryContainer {
+  max-width: calc(100vw - 580px);
+  display: flex;
+  padding: 1em 0;
+  overflow-y: auto;
+}
+.summaryContainer > * {
+  margin-right: 10px;
+}
+
+.summaryContainer > *:last-child {
+  margin-right: 0;
+}
+
+/* summary card */
+
+.summaryContainer__card {
+  background-color: var(--color-white);
+  padding: 1em 1em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 128px;
+}
+
+.summaryContainer__card .title {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+.summaryContainer__card .value {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+/* Filter */
+
+.filterContainer {
+  width: 100%;
+  padding: 1em 0;
+  display: flex;
+}
+
+.filterContainer .inputField {
+  flex: 1;
+  padding: 0.75em;
+  border-radius: 2.5px;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.filterContainer .inputField:focus {
+  outline: var(--color-main) solid 3px;
+}
+
+.filterContainer .searchButton {
+  padding: 0.75em;
+  border-radius: 2.5px;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  margin: 0.5em;
+  background-color: var(--color-main);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+/* tip card */
+
+.tipcardContainer {
+  background-color: var(--color-white);
+  padding: 1em 1em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.tipcardContainer .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.tipcardContainer .metadata {
+  padding: 1em 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.tipcardContainer .metaValue {
+  font-weight: 300;
+}
+
+.tipcardContainer .content {
+  font-weight: 300;
+}
+
+.tipcardContainer .action {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+}
+
+.tipcardContainer .action button {
+  padding: 0.75em;
+  border-radius: 2.5px;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  margin-right: 0.5em;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
