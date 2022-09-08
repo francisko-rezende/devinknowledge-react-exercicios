@@ -1,0 +1,28 @@
+.filterContainer {
+  width: 100%;
+  padding: 1em 0;
+  display: flex;
+}
+
+.filterContainer .inputField {
+  flex: 1;
+  padding: 0.75em;
+  border-radius: 2.5px;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.filterContainer .inputField:focus {
+  outline: var(--color-main) solid 3px;
+}
+
+.filterContainer .searchButton {
+  padding: 0.75em;
+  border-radius: 2.5px;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  margin: 0.5em;
+  background-color: var(--color-main);
+  color: var(--color-white);
+  cursor: pointer;
+}

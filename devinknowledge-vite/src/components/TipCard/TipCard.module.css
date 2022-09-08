@@ -1,0 +1,57 @@
+.tipcardContainer {
+  background-color: var(--color-white);
+  padding: 1em 1em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.tipcardContainer .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.tipcardContainer .metadata {
+  padding: 1em 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.tipcardContainer .metaValue {
+  font-weight: 300;
+}
+
+.tipcardContainer .content {
+  font-weight: 300;
+}
+
+.tipcardContainer .action {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+}
+
+.tipcardContainer .action button {
+  padding: 0.75em;
+  border-radius: 2.5px;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  margin-right: 0.5em;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.btnGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5em 0;
+}
+
+.alignLeft {
+  justify-content: flex-start;
+}
+
+.alignLeft > * {
+  margin-right: 0.5em;
+}
