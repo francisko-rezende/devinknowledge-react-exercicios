@@ -1,0 +1,13 @@
+.summaryContainer {
+  max-width: calc(100vw - 580px);
+  display: flex;
+  padding: 1em 0;
+  overflow-y: auto;
+}
+.summaryContainer > * {
+  margin-right: 10px;
+}
+
+.summaryContainer > *:last-child {
+  margin-right: 0;
+}

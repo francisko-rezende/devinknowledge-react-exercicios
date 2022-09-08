@@ -1,0 +1,22 @@
+.summaryContainer__card {
+  background-color: var(--color-white);
+  padding: 1em 1em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 128px;
+}
+
+.summaryContainer__card .title {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+.summaryContainer__card .value {
+  font-size: 2rem;
+  font-weight: 400;
+}
