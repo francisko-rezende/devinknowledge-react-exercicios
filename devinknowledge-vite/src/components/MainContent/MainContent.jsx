@@ -1,4 +1,5 @@
 import React from "react";
+import { useAppContext } from "../../contexts/AppContext";
 import { Button } from "../Button";
 import { CardList } from "../CardList";
 import { Filter } from "../Filter";
@@ -7,6 +8,9 @@ import { TipCard } from "../TipCard";
 import styles from "./MainContent.module.css";
 
 export const MainContent = () => {
+  const result = useAppContext();
+  console.log(result);
+
   return (
     <main className={styles.mainContainer}>
       <Summary />
