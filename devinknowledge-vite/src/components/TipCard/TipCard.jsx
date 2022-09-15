@@ -42,7 +42,7 @@ export const TipCard = ({ titulo, descricao, categoria, linguagem, video }) => {
 
 TipCard.propTypes = {
   titulo: PropTypes.string,
-  descricao: PropTypes.number,
+  descricao: PropTypes.string,
   categoria: PropTypes.string,
   linguagem: PropTypes.string,
   video: PropTypes.string,
