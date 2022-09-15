@@ -21,13 +21,25 @@ export const AppContext = ({ children }) => {
     setFilter(query ? query : null);
   };
 
+  const sortByCategory = () => {
+    const categories = Array.from(new Set(allTips.map((tip) => tip.categoria)));
+    return categories.map((catName) => {
+      const count = allTips.filter((tip) => tip.categoria == catName).length;
+      return { title: catName, count: count };
+    });
+  };
+
   const tips =
     filter === null
       ? allTips
       : allTips.filter((tip) => tip.title.includes(filter));
 
+  const categoriesList = sortByCategory(tips);
+
   return (
-    <appContext.Provider value={{ createTip, filterTips, tips }}>
+    <appContext.Provider
+      value={{ createTip, filterTips, tips, categoriesList }}
+    >
       {children}
     </appContext.Provider>
   );
