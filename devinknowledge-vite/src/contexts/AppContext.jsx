@@ -29,16 +29,21 @@ export const AppContext = ({ children }) => {
     });
   };
 
+  const deleteTip = (titulo) =>
+    setAllTips((previousTips) =>
+      previousTips.filter((previousTip) => previousTip.titulo !== titulo)
+    );
+
   const tips =
     filter === null
       ? allTips
-      : allTips.filter((tip) => tip.title.includes(filter));
+      : allTips.filter((tip) => tip.titulo.includes(filter));
 
   const categoriesList = sortByCategory(tips);
 
   return (
     <appContext.Provider
-      value={{ createTip, filterTips, tips, categoriesList }}
+      value={{ createTip, filterTips, tips, categoriesList, deleteTip }}
     >
       {children}
     </appContext.Provider>
@@ -49,10 +54,10 @@ AppContext.propTypes = {
   children: PropTypes.node,
 };
 
-{
-  titulo: "";
-  categoria: "";
-  linguagem: "";
-  descricao: "";
-  video: "";
-}
+// {
+//   titulo: "";
+//   categoria: "";
+//   linguagem: "";
+//   descricao: "";
+//   video: "";
+// }

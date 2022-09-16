@@ -1,12 +1,16 @@
 import React from "react";
+import { useAppContext } from "../../contexts/AppContext";
 import { SummaryCard } from "../SummaryCard";
 import styles from "./Summary.module.css";
 
 export const Summary = () => {
+  const { categoriesList } = useAppContext();
+
   return (
     <div className={styles.summaryContainer}>
-      <SummaryCard title="back-end" count={1} />
-      <SummaryCard title="total" count={1} />
+      {categoriesList.map(({ title, count }) => (
+        <SummaryCard title={title} count={count} />
+      ))}
     </div>
   );
 };

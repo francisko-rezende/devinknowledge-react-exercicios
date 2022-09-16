@@ -2,8 +2,10 @@ import React from "react";
 import { Button } from "../Button";
 import styles from "./TipCard.module.css";
 import PropTypes from "prop-types";
+import { useAppContext } from "../../contexts/AppContext";
 
 export const TipCard = ({ titulo, descricao, categoria, linguagem, video }) => {
+  const { deleteTip } = useAppContext();
   return (
     <div className={styles.tipcardContainer}>
       <h2 className={styles.title}>{titulo}</h2>
@@ -32,7 +34,11 @@ export const TipCard = ({ titulo, descricao, categoria, linguagem, video }) => {
           </Button>
         )}
 
-        <Button type="submit" variant="secondary">
+        <Button
+          type="submit"
+          variant="secondary"
+          onClick={() => deleteTip(titulo)}
+        >
           Apagar
         </Button>
       </div>

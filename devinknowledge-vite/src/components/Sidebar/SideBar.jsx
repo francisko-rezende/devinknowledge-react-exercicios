@@ -4,6 +4,7 @@ import { Button } from "../Button";
 import styles from "./SideBar.module.css";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useAppContext } from "../../contexts/AppContext";
 
 const formSchema = z.object({
   titulo: z
@@ -33,8 +34,6 @@ const formSchema = z.object({
   video: z.string().url("Url inválida").or(z.literal("")),
 });
 
-const handleCreateTip = (data) => console.log(data);
-
 export const SideBar = () => {
   const {
     register,
@@ -43,13 +42,15 @@ export const SideBar = () => {
     reset,
   } = useForm({ resolver: zodResolver(formSchema) });
 
+  const { createTip } = useAppContext();
+
   return (
     <aside className={styles.sidebarContainer}>
       <div className={styles.sidebarContainer__logo}>
         <h1>DEVInKnowledge</h1>
         <span>Learn, Code and Save</span>
       </div>
-      <form onSubmit={handleSubmit(handleCreateTip)}>
+      <form onSubmit={handleSubmit(createTip)}>
         <div className={styles.inputGroup}>
           <label htmlFor="titulo">Titulo</label>
           <input
